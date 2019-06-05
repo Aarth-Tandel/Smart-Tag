@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.iot.smarttracker.ble.sensortag"
+    android:versionCode="6"
+    android:versionName="2.3">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <application
+        android:name=".SensorTagApplicationClass"
+        android:allowBackup="false"
+        android:icon="@drawable/tible"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light">
+        <activity android:name="com.iot.smarttracker.login.LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.iot.smarttracker.ble.common.BluetoothLeService"
+            android:enabled="true" />
+        <service
+            android:name="org.eclipse.paho.android.service.MqttService"
+            android:enabled="true" />
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="unspecified">
+
+        </activity>
+        <activity
+            android:name=".DeviceActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".FwUpdateActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:parentActivityName=".DeviceActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".FwUpdateActivity_CC26xx"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:parentActivityName=".DeviceActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".FileActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:parentActivityName=".FwUpdateActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".PreferencesActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="Preferences"
+            android:parentActivityName=".DeviceActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".fwSelectorView"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:parentActivityName=".FwUpdateActivity_CC26xx"
+            android:screenOrientation="unspecified" />
+    </application>
+
+</manifest>
