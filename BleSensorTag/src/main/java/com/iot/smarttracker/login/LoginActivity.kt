@@ -51,6 +51,7 @@ class LoginActivity : AppCompatActivity() {
         sign_in_button.setOnClickListener {
             signIn()
         }
+
     }
 
     public override fun onStart() {

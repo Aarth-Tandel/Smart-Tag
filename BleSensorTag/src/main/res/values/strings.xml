@@ -22,7 +22,7 @@
         <item>SensorTag2</item>
         <item>CC2650 SensorTag</item>
     </string-array>
-    <string name="nodevice">There are no SensorTags advertising within range. Please push the side button on the SensorTag to start advertising.</string>
+    <string name="nodevice">There are no devices advertising within range. Please push the button on Smart Tracker to start advertising.</string>
     <string name="scan_advice">The Android device is not scanning. Please tap \'Scan\' to scan for SensorTags.</string>
     <string name="bt_adapter_disable">Disable Bluetooth adapter</string>
     <string name="bt_adapter_reset">Reset Bluetooth adapter</string>

@@ -117,7 +117,7 @@ public class DeviceInformationServiceProfile extends GenericBluetoothProfile {
 				this.ManifacturerNAMEc = c;
 			}
 		}
-		tRow.title.setText("Device Information Service");
+		tRow.title.setText("Device Information");
 		tRow.sl1.setVisibility(View.INVISIBLE);
 		this.tRow.setIcon(this.getIconPrefix(), service.getUuid().toString());
 	}

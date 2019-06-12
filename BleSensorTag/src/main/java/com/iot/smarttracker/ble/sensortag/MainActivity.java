@@ -264,18 +264,18 @@ public class MainActivity extends ViewPagerActivity {
             case android.R.id.home:
                 onBackPressed();
                 return true;
-            case R.id.opt_bt:
-                onBluetooth();
-                break;
-            case R.id.opt_e2e:
-                onUrl(URL_FORUM);
-                break;
-            case R.id.opt_sthome:
-                onUrl(URL_STHOME);
-                break;
-            case R.id.opt_license:
-                //onLicense();
-                break;
+//            case R.id.opt_bt:
+//                onBluetooth();
+//                break;
+//            case R.id.opt_e2e:
+//                onUrl(URL_FORUM);
+//                break;
+//            case R.id.opt_sthome:
+//                onUrl(URL_STHOME);
+//                break;
+//            case R.id.opt_license:
+//                //onLicense();
+//                break;
             case R.id.opt_about:
                 onAbout();
                 break;
